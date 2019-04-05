@@ -1,8 +1,8 @@
 class ShinglesController < ApplicationController
 
-	before_action :gets_shingles_data
+  before_action :gets_shingles_data
   
-  def index	
+  def index 
     if params[:uid]
       @selected_shingle = @shingles.select{|a| a.uid == params[:uid]}.first
     else
@@ -14,10 +14,10 @@ class ShinglesController < ApplicationController
   
   # This method will fetech all the shingles data from API provided
   def gets_shingles_data
-  	begin
+    begin
       url = "https://mdms.owenscorning.com/api/v1/product/shingles"
-    	data = RestClient.get(url)
-    	@shingles = JSON.parse(data, object_class: OpenStruct)
+      data = RestClient.get(url)
+      @shingles = JSON.parse(data, object_class: OpenStruct)
     rescue
       @shingles  = []
     end
