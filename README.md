@@ -1,24 +1,16 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Shingle data and images Exercise
 
-Things you may want to cover:
+Ruby version: **2.4.3**
 
-* Ruby version
+Rails version: **5.1.4**
 
-* System dependencies
+Database: **MySQL**
 
-* Configuration
+Data fetched from Owens Corning’s public Shingle API: https://mdms.owenscorning.com/api/v1/product/shingles?zip=43659
 
-* Database creation
+### Screenshots
 
-* Database initialization
+![alt tag](https://raw.githubusercontent.com/natvar203/shingles/master/public/Screenshot1.png)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt tag](https://raw.githubusercontent.com/natvar203/shingles/master/public/Screenshot2.png)
