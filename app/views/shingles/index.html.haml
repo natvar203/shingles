@@ -1,0 +1,8 @@
+%h1 Shingles
+%p lines of asphalt roofing shingles
+
+- if @shingles.present? 
+  = label_tag(:shingle_uid, 'shingles')
+  = collection_select(:shingle, :shingle_uid, @shingles, :uid, :name)
+  #carousel-shingles
+    = render 'carousel' , shingle: @selected_shingle 

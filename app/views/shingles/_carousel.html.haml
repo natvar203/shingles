@@ -1,0 +1,24 @@
+.container.my-4
+  %hr.my-4/
+  / Carousel Wrapper
+  #carousel-thumb.carousel.slide.carousel-fade.carousel-thumbnails{"data-ride" => "carousel"}
+    / Slides
+    .carousel-inner{:role => "listbox"}
+      - shingle.shingle_colors.each_with_index do |image, index|
+        .carousel-item{class: "#{index == 0 ? 'active' : ''}"}
+          %img.d-block.w-100{:alt => image.name, :src => image.swatch_768x485_url}/
+    / /.Slides
+    / Controls
+    %a.carousel-control-prev{"data-slide" => "prev", :href => "#carousel-thumb", :role => "button"}
+      %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+      %span.sr-only Previous
+    %a.carousel-control-next{"data-slide" => "next", :href => "#carousel-thumb", :role => "button"}
+      %span.carousel-control-next-icon{"aria-hidden" => "true"}
+      %span.sr-only Next
+    / /.Controls
+    %ol.carousel-indicators
+      - shingle.shingle_colors.each_with_index do |color, index|
+        %li{class: "#{index == 0 ? 'active' : ''}", "data-slide-to" => "#{index}", "data-target" => "#carousel-thumb"}
+          %img.d-block{width: 50, alt: color.name, :src => color.swatch_160x160_url}/
+  / /.Carousel Wrapper
+
